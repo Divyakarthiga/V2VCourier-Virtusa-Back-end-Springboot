@@ -1,0 +1,73 @@
+<div class="sidenav">
+    <a href="/view-consignment">View Consignment</a>
+    <a href="/add-branch">Add Branch</a>
+    <a href="/view-branch">View Branch</a>
+    <a href="/add-delivery">Add Delivery</a>
+    <a href="/view-delivery">View Delivery</a>
+    <a href="/add-employee">Add Employee</a>
+    <a href="/view-employee">View Employee</a>
+    <a href="/add-dispatch">Add Dispatch</a>
+    <a href="/view-dispatch">View Dispatch</a>
+    <a href="/find-optimized">Find Optimized Route</a>
+</div>
+<div class="bar">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Shippername</th>
+                    <th>Receivername</th>
+                    <th>Receiveraddress</th>
+                    <th>ReceiverPhonenumber</th>
+                    <th>Destination Place</th>
+                    <th>Date to be delivered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>{{ord.sname}}</td>
+                <td>{{ord.rname}}</td>
+                <td>{{ord.raddr}}</td>
+                <td>{{ord.rph}}</td>
+                <td>{{ord.des}}</td>
+                <td>{{ord.dod}}</td>
+        </tbody>
+    </table>
+</div>
+</div>
+<div class="bar1">
+    <h1 style="text-align: center;">Add Dispatch</h1>
+    <form class="form-signin" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="inputShippername" class="sr-only">Shipper name</label>
+            <input type="text" id="inputShippername" [formControlName]="'shipn'" class="form-control" placeholder="Shipper name" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputReceivername" class="sr-only">Receiver name</label>
+            <input type="text" id="inputReceivername" [formControlName]="'recen'" class="form-control" placeholder="Receiver name" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputReceiverAddress" class="sr-only">Receiver Address</label>
+            <input type="text" id="inputReceiverAddress" [formControlName]="'receA'" class="form-control" placeholder="Receiveraddress" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputReceiverPhonenumber" class="sr-only">Receiver Phone number</label>
+            <input type="text" id="inputReceiverPhonenumber" [formControlName]="'ph'" class="form-control" placeholder="ReceiverPhonenumber" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputDestination" class="sr-only">Destination</label>
+            <input type="text" id="inputDestination" [formControlName]="'desti'" class="form-control" placeholder="Destination" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputAssignedto" class="sr-only">Assigned to</label>
+            <input type="text" id="inputAssignedto" [formControlName]="'assigned'" class="form-control" placeholder="Assigned to" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputDateofDispatch" class="sr-only">Date of Dispatch</label>
+            <input type="text" id="inputDateofDispatch" [formControlName]="'daDi'" class="form-control" placeholder="Date of Dispatch" required="" >
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="Submit">Add</button>
+    </form>
+</div>
+
+
+

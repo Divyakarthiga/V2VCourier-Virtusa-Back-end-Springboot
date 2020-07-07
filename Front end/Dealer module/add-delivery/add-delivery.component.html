@@ -1,0 +1,63 @@
+<div class="sidenav">
+    <a href="/view-consignment">View Consignment</a>
+    <a href="/add-branch">Add Branch</a>
+    <a href="/view-branch">View Branch</a>
+    <a href="/add-delivery">Add Delivery</a>
+    <a href="/view-delivery">View Delivery</a>
+    <a href="/add-employee">Add Employee</a>
+    <a href="/view-employee">View Employee</a>
+    <a href="/add-dispatch">Add Dispatch</a>
+    <a href="/view-dispatch">View Dispatch</a>
+    <a href="/find-optimized">Find Optimized Route</a>
+</div>
+<div class="bar">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>shippername</th>
+                    <th>shipperaddress</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Date to be delivered</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>{{ord.sname}}</td>
+                <td>{{ord.saddr}}</td>
+                <td>{{ord.src}}</td>
+                <td>{{ord.des}}</td>
+                <td>{{ord.dod}}</td>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+<div class="bar1">
+    <h1 style="text-align: center;">Add Delivery</h1>
+    <form class="form-signin" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="inputBranchname" class="sr-only">Branch name</label>
+            <input type="text" id="inputBranchname" [formControlName]="'bbname'" class="form-control" placeholder="Branch name" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputBranchLocation" class="sr-only">Branch Location</label>
+            <input type="text" id="inputBranchLocation" [formControlName]="'bl'" class="form-control" placeholder="Branch Location" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputShippernamename" class="sr-only">Shipper name</label>
+            <input type="text" id="inputShippername" [formControlName]="'shin'" class="form-control" placeholder="Shipper name" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputDeatinationBranch" class="sr-only">Destination Branch</label>
+            <input type="text" id="inputDestinationBranch" [formControlName]="'db'" class="form-control" placeholder="Destination Branch" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputDateofDelivery" class="sr-only">Date to be delivered</label>
+            <input type="text" id="inputDateofDelivery" [formControlName]="'dofD'" class="form-control" placeholder="Date to be delivered" required="" >
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="Submit">Add</button>
+    </form>
+</div>
+

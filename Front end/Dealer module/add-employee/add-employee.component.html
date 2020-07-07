@@ -1,0 +1,42 @@
+<div class="sidenav">
+    <a href="/view-consignment">View Consignment</a>
+    <a href="/add-branch">Add Branch</a>
+    <a href="/view-branch">View Branch</a>
+    <a href="/add-delivery">Add Delivery</a>
+    <a href="/view-delivery">View Delivery</a>
+    <a href="/add-employee">Add Employee</a>
+    <a href="/view-employee">View Employee</a>
+    <a href="/add-dispatch">Add Dispatch</a>
+    <a href="/view-dispatch">View Dispatch</a>
+    <a href="/find-optimized">Find Optimized Route</a>
+</div>
+<div class="bar">
+    <h1 style="text-align: center;">Add Employee</h1>
+    <form class="form-signin" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="inputEmployeeName" class="sr-only">Employee name</label>
+            <input type="text" id="inputEmployeeName" [formControlName]="'employeeName'" class="form-control" placeholder="Employee name" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputEmployeeEmail" class="sr-only">Employee email</label>
+            <input type="text" id="inputEmployeeEmail" [formControlName]="'empEmail'" class="form-control" placeholder="Employee email" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputRole" class="sr-only">Role</label>
+            <input type="text" id="inputRole" [formControlName]="'ro'" class="form-control" placeholder="Role" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputSalary" class="sr-only">Salary</label>
+            <input type="text" id="inputSalary" [formControlName]="'sal'" class="form-control" placeholder="Salary" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputBranchName" class="sr-only">Branch Name</label>
+            <input type="text" id="inputBranchName" [formControlName]="'branchNam'" class="form-control" placeholder="BranchName" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputBranchLocation" class="sr-only">Branch Location</label>
+            <input type="text" id="inputBranchLocation" [formControlName]="'branchLo'" class="form-control" placeholder="BranchLocation" required="" >
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="Submit">Add</button>
+    </form>
+</div>

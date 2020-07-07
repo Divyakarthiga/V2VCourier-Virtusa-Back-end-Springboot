@@ -1,0 +1,46 @@
+<div class="sidenav">
+    <a href="/view-consignment">View Consignment</a>
+    <a href="/add-branch">Add Branch</a>
+    <a href="/view-branch">View Branch</a>
+    <a href="/add-delivery">Add Delivery</a>
+    <a href="/view-delivery">View Delivery</a>
+    <a href="/add-employee">Add Employee</a>
+    <a href="/view-employee">View Employee</a>
+    <a href="/add-dispatch">Add Dispatch</a>
+    <a href="/view-dispatch">View Dispatch</a>
+</div>
+<div class="bar">
+    <h1 style="text-align: center;">View Dispatch</h1>
+<div class="col-md-6">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Dispatch Id</th>
+                <th>Shipper name</th>
+                <th>Receiver name</th>
+                <th>Receiver address</th>
+                <th>Receiver Phone number</th>
+                <th>Destination </th>
+                <th>Assigned to</th>
+                <th>Date of Disoatch</th>
+                <th>CustomerTrackingId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dispatch of dispatches | async">
+            <td>{{dispatch.diId}}</td>
+            <td>{{dispatch.shipn}}</td>
+            <td>{{dispatch.recen}}</td>
+            <td>{{dispatch.receA}}</td>
+            <td>{{dispatch.ph}}</td>
+            <td>{{dispatch.desti}}</td>
+            <td>{{dispatch.assigned}}</td>
+            <td>{{dispatch.daDi}}</td>
+            <td>{{dispatch.dispatchedOn}}</td>
+            <td><a type="button" href="/dispatch/{{dispatch.diId}}" class="btn btn-danger">Track Status</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+

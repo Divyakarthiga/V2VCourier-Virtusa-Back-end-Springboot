@@ -1,0 +1,39 @@
+<div class="sidenav">
+    <a href="/view-consignment">View Consignment</a>
+    <a href="/add-branch">Add Branch</a>
+    <a href="/view-branch">View Branch</a>
+    <a href="/add-delivery">Add Delivery</a>
+    <a href="/view-delivery">View Delivery</a>
+    <a href="/add-employee">Add Employee</a>
+    <a href="/view-employee">View Employee</a>
+    <a href="/add-dispatch">Add Dispatch</a>
+    <a href="/view-dispatch">View Dispatch</a>
+</div>
+<div class="bar">
+    <h1 style="text-align: center;">View Delivery</h1>
+<div class="col-md-6">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Delivery Id</th>
+                <th>Branch name</th>
+                <th>Branch Location</th>
+                <th>Shipper name</th>
+                <th>Destination Branch</th>
+                <th>Date to be Delivered</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let delivery of deliveries | async">
+            <td>{{delivery.did}}</td>
+            <td>{{delivery.bbname}}</td>
+            <td>{{delivery.bl}}</td>
+            <td>{{delivery.shin}}</td>
+            <td>{{delivery.db}}</td>
+            <td>{{delivery.dofD}}</td>
+            <td><a type="button" href="/delivery/{{delivery.did}}" class="btn btn-danger">Track Status</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
