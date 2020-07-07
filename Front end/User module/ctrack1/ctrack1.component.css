@@ -1,0 +1,16 @@
+.bar
+{
+    top:200px;
+    left:500px;
+    right:100px;
+    position: absolute;
+}
+
+
+.bar1
+{
+    top:350px;
+    left:260px;
+    right:0px;
+    position: absolute;
+}

@@ -1,0 +1,56 @@
+    <form class="box" method="post" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1>Start Your Shipping</h1>
+        <div class="form-group">
+            <label for="inputShippername" class="sr-only">Shippername</label>
+            <input type="text" id="inputShippername" [formControlName]="'sname'" class="form-control" placeholder="Shippername" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputShipperAddress" class="sr-only">Shipper Address</label>
+            <input type="text" id="inputShipperAddress" [formControlName]="'saddr'" class="form-control" placeholder="Shipper Address" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputShipperPhonenumber" class="sr-only">Shipper Phonenumber</label>
+            <input type="text" id="inputShipperPhonenumber" [formControlName]="'sph'" class="form-control" placeholder="Shipper Phonenumber" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputSource" class="sr-only">Source</label>
+            <input type="text" id="inputSource" [formControlName]="'src'" class="form-control" placeholder="Source" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputMaterial" class="sr-only">Material</label>
+            <input type="text" id="inputMaterial" [formControlName]="'mat'" class="form-control" placeholder="Material" required="">
+        </div>
+        <div class="form-group">
+            <label for="inputCategory" class="sr-only">Category</label>
+           <select type="text" id="inputCategory" [formControlName]="'category'" required>
+               <option value="Speed">Speed</option>
+               <option value="Spical">Spical</option>
+               <option value="Normal">Normal</option>
+           </select>
+        </div>
+        <div class="form-group">
+            <label for="inputTotalweight" class="sr-only">Total weight</label>
+            <input type="text" id="inputTotalweight" [formControlName]="'totalW'" class="form-control" placeholder="Total Weight" required="">
+        </div>
+        <div class="form-group">
+            <label for="inputReceivername" class="sr-only">Receivername</label>
+            <input type="text" id="inputReceivername" [formControlName]="'rname'" class="form-control" placeholder="Receivername" required="">
+        </div>
+        <div class="form-group">
+            <label for="inputReceiverAddress" class="sr-only">Receiver Address</label>
+            <input type="text" id="inputReceivername" [formControlName]="'raddr'" class="form-control" placeholder="ReceiverAddress" required="">
+        </div>
+        <div class="form-group">
+            <label for="inputReceiverPhonenumber" class="sr-only">Receiver Phonenumber</label>
+            <input type="text" id="inputReceiverPhonenumber" [formControlName]="'rph'" class="form-control" placeholder="Receiver Phonenumber" required="" >
+        </div>
+        <div class="form-group">
+            <label for="inputDate to be delivered" class="sr-only">Date to be delivered</label>
+            <input type="text" id="inputDate to be delivered" [formControlName]="'dod'" class="form-control" placeholder="Date to be delivered" required="">
+        </div>
+        <div class="form-group">
+            <label for="inputDestination" class="sr-only">Destination</label>
+            <input type="text" id="inputDestination" [formControlName]="'des'" class="form-control" placeholder="Destination" required="">
+        </div>
+        <input type="submit" value="Add">
+    </form>
