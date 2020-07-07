@@ -1,0 +1,40 @@
+<div class="sidenav">
+    <a href="/view-consignment">View Consignment</a>
+    <a href="/add-branch">Add Branch</a>
+    <a href="/view-branch">View Branch</a>
+    <a href="/add-delivery">Add Delivery</a>
+    <a href="/view-delivery">View Delivery</a>
+    <a href="/add-employee">Add Employee</a>
+    <a href="/view-employee">View Employee</a>
+    <a href="/add-dispatch">Add Dispatch</a>
+    <a href="/view-dispatch">View Dispatch</a>
+</div>
+<div class="bar">
+    <h1 style="text-align: center;">View Employee</h1>
+<div class="col-md-6">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Emplyee name</th>
+                <th>Employee Email</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Branch name</th>
+                <th>Branch Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees | async">
+            <td>{{employee.empId}}</td>
+            <td>{{employee.employeeName}}</td>
+            <td>{{employee.empEmail}}</td>
+            <td>{{employee.ro}}</td>
+            <td>{{employee.sal}}</td>
+            <td>{{employee.branchNam}}</td>
+            <td>{{employee.branchLo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
