@@ -1,0 +1,31 @@
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <body>
+       <div class="menu-bar">
+       <ul>
+           <li><a href="/home"><i class="fa fa-home"></i>Home</a></li>
+           <li><a href=""><i class="fa fa-clone"></i>About</a></li>
+           <li><a href=""><i class="fa fa-users"></i>User</a>
+        <div class="sub-menu-1">
+            <ul>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+            <div ng-if="authService.isAuthenticated()">
+            <li><a href="/add-post">Add Feedback</a></li>
+            </div>
+            <li><a href="/view-post">View Reviews</a></li>
+            <li><a href="/custtracking">Track order</a></li>
+
+            </ul>
+        </div>
+        
+        </li>
+           <li><a href="/admin-login"><i class="fa fa-user"></i>Admin</a></li>
+           <li><a href="/dealer-login"><i class="fa fa-angellist"></i>Dealer</a></li>
+           <li><a href="/home" (click)="logout()">Logout</a></li>
+
+       </ul>
+       </div>
+   </body>
+
+</html>

@@ -1,0 +1,62 @@
+body{
+    background-image: url(hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-container {
+    position: absolute;
+    bottom: 0;
+    color: #2dc997;
+    top:280px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-get-started {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+  .btn-get-started:hover {
+    background: #2dc997;
+    border: 2px solid #2dc997;
+  }
+
+  #footer .copyright {
+    text-align: center;
+  }
+
+  #footer {
+    background: #343b40;
+    padding: 30px 0;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  #footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+  }
+  .bottom
+  {
+      position: fixed;
+      bottom: 0;
+  }
